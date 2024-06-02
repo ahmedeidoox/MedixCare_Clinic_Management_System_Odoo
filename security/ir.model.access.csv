@@ -1,1 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_clinic_patient,access_clinic_patient,model_clinic_patient,,1,1,1,1
+access_clinic_department,access_clinic_department,model_clinic_department,,1,1,1,1
+access_clinic_available_day,access_clinic_available_day,model_clinic_available_day,,1,1,1,1

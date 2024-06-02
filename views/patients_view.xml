@@ -1,0 +1,56 @@
+<odoo>
+
+
+    <!-- Patients Form View -->
+    <record id="patients_form_view" model="ir.ui.view">
+        <field name="name">Patients Form View</field>
+        <field name="model">clinic.patient</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>
+                        <field name="full_name" placeholder="Patient Name.."/>
+                    </h1>
+                    <group>
+                        <field name="phone_number" placeholder="e.g. 01122222222"/>
+                        <field name="age" placeholder="Patient Age.."/>
+                        <field name="gender" placeholder="Male or Female?"/>
+                    </group>
+                    <notebook>
+                        <page string="Medical History">
+                            <field name="medical_history" placeholder="Patient Medical History in details.."/>
+                        </page>
+
+                    </notebook>
+
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Patients Tree View -->
+    <record id="patients_tree_view" model="ir.ui.view">
+        <field name="name">Patients Tree View</field>
+        <field name="model">clinic.patient</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="full_name"/>
+                <field name="phone_number"/>
+                <field name="gender"/>
+                <field name="age"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="patients_action_window" model="ir.actions.act_window">
+        <field name="name">Patients Information</field>
+        <field name="res_model">clinic.patient</field>
+    </record>
+
+    <menuitem id="patients_details_submenu"
+              name="Information"
+              parent="patients_menu"
+              action="patients_action_window"/>
+</odoo>

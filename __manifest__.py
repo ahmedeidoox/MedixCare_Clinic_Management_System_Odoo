@@ -8,6 +8,7 @@
         "security/security.xml",
         "security/ir.model.access.csv",
         "views/base_menu.xml",
+        "views/departments_view.xml",
         "views/patients_view.xml",
             ],
     "application":True,

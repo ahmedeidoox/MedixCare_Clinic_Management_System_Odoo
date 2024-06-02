@@ -1,0 +1,49 @@
+<odoo>
+
+
+    <!-- Departments Form View -->
+    <record id="departments_form_view" model="ir.ui.view">
+        <field name="name">Departments Form View</field>
+        <field name="model">clinic.department</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="ticket_price"/>
+                        <field name="available_days" widget="many2many_tags"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Departments Tree View -->
+
+    <record id="departments_tree_view" model="ir.ui.view">
+        <field name="name">Departments Tree View</field>
+        <field name="model">clinic.department</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="available_days" widget="many2many_tags"/>
+                <field name="ticket_price"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="department_action_window" model="ir.actions.act_window">
+        <field name="name">Departments Information</field>
+        <field name="res_model">clinic.department</field>
+
+    </record>
+
+
+    <menuitem id="departments_details_submenu"
+              name="Details"
+              parent="departments_menu"
+              action="department_action_window"/>
+</odoo>
