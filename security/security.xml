@@ -1,0 +1,22 @@
+<odoo>
+
+    <record id="clinic_security_groups_category" model="ir.module.category">
+        <field name="name">MedixCare Groups</field>
+    </record>
+
+    <record id="clinic_manager_group" model="res.groups">
+        <field name="name">CLinic Manager</field>
+        <field name="category_id" ref="clinic_system.clinic_security_groups_category"/>
+    </record>
+
+    <record id="clinic_doctor_group" model="res.groups">
+        <field name="name">CLinic Doctor</field>
+        <field name="category_id" ref="clinic_system.clinic_security_groups_category"/>
+    </record>
+
+    <record id="clinic_customer_service_group" model="res.groups">
+        <field name="name">CLinic Customer Service</field>
+        <field name="category_id" ref="clinic_system.clinic_security_groups_category"/>
+    </record>
+
+</odoo>
