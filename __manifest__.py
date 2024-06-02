@@ -10,6 +10,7 @@
         "views/base_menu.xml",
         "views/departments_view.xml",
         "views/patients_view.xml",
+        "views/res_users_doctors.xml",
             ],
     "application":True,
 

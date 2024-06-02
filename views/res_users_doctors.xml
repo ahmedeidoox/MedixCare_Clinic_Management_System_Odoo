@@ -1,0 +1,59 @@
+<odoo>
+
+
+    <!-- res.users doctors inheritence Tree View -->
+    <record id="res_users_doctors_inherited_tree_view" model="ir.ui.view">
+        <field name="name">Doctors Tree View</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='name']" position="after">
+                <field name="belonged_department"/>
+                <field name="is_doctor"/>
+                <field name="experience_years"/>
+            </xpath>
+            <xpath expr="//tree/field[@name='login']" position="replace"/>
+            <xpath expr="//tree/field[@name='lang']" position="replace"/>
+            <xpath expr="//tree/field[@name='login_date']" position="replace"/>
+
+        </field>
+    </record>
+
+
+    <!-- res.users Search View Inheritence -->
+    <record id="res_users_doctors_inherited_search_view" model="ir.ui.view">
+        <field name="name">Doctors Search View</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_search"/>
+        <field name="arch" type="xml">
+            <!-- Remove multiple filters -->
+            <xpath expr="//search/filter[@name='filter_no_share']" position="replace"/>
+            <xpath expr="//search/filter[@name='filter_share']" position="replace"/>
+            <xpath expr="//search/filter[@name='Inactive']" position="replace"/>
+        </field>
+    </record>
+
+    <!-- auth totp Search View Inheritence -->
+    <record id="res_usersss_doctors_inherited_search_view" model="ir.ui.view">
+        <field name="name">Doctors Search View</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="auth_totp.res_users_view_search"/>
+        <field name="arch" type="xml">
+            <!-- Remove multiple filters -->
+            <xpath expr="//search/filter[@name='totp_enabled']" position="replace"/>
+            <xpath expr="//search/filter[@name='totp_disabled']" position="replace"/>
+        </field>
+    </record>
+
+
+    <record id="doctors_action_window" model="ir.actions.act_window">
+        <field name="name">Doctors Information</field>
+        <field name="res_model">res.users</field>
+    </record>
+
+    <menuitem id="doctors_details_submenu"
+              name="Doctors"
+              parent="doctors_menu"
+              action="doctors_action_window"
+    />
+</odoo>

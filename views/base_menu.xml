@@ -2,5 +2,6 @@
     <menuitem id="medixcare_base_menu" name="MedixCare" sequence="1"/>
     <menuitem id="departments_menu" name="Departments" parent = "medixcare_base_menu" />
     <menuitem id="patients_menu" name="Patients" parent = "medixcare_base_menu" />
+    <menuitem id="doctors_menu" name="Doctors" parent = "medixcare_base_menu" />
     <menuitem id="appointments_menu" name="Appointments" parent = "medixcare_base_menu"/>
 </odoo>

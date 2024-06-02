@@ -8,7 +8,7 @@ class ClinicDepartment(models.Model):
     available_days = fields.Many2many("clinic.available.day",string="Available Days")
     ticket_price= fields.Float(required=True,default=0.0,string="Ticket Price")
 
-    doctor_ids = fields.One2many("res.users","department_id",string="Doctors")
+    doctor_ids = fields.One2many("res.users","belonged_department",string="Doctors")
 
 
 
