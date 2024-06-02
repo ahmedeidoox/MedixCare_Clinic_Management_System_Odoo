@@ -1,0 +1,1 @@
+# MedixCare_Clinic_Management_System_Odoo
