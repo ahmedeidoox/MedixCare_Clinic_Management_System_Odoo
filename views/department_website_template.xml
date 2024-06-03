@@ -1,0 +1,52 @@
+<odoo>
+
+    <template id="all_departments_template" name="Departments">
+        <t t-call="website.layout">
+            <t t-if="len(departments) == 0 ">
+                <div class="center_div">
+                    <h2>No departments found..</h2>
+                </div>
+            </t>
+            <t t-else="">
+                <div class="center_div">
+                    <h3>Available Departments in MedixCare</h3>
+                </div>
+                <div class="center_table">
+                    <table class="bordered-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Ticket Price</th>
+                                <th>Available days</th>
+                                <th>Doctors</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="departments" t-as="department">
+                                <tr>
+                                    <td>
+                                        <t t-esc="department.name"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="department.ticket_price"/>
+                                    </td>
+                                    <td>
+                                        <t t-foreach="department.available_days" t-as="dep_av_day">
+                                            <t t-esc="dep_av_day.name"/>
+                                        </t>
+
+                                    </td>
+                                    <td>
+                                        <a t-att-href="'/departments/%d' % department.id">view doctors</a>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+
+    </template>
+
+</odoo>

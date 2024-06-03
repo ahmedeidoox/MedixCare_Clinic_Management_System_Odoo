@@ -11,7 +11,14 @@
         "views/departments_view.xml",
         "views/patients_view.xml",
         "views/res_users_doctors.xml",
+        "views/department_website_template.xml",
             ],
+
+    "assets":{
+        "web.assets_frontend":[
+            "clinic_system/static/src/css/frontend/departments_template_style.css",
+        ]
+    },
     "application":True,
 
 

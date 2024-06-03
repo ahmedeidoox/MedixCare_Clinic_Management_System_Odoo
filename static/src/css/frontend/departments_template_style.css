@@ -1,0 +1,35 @@
+.center_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.xxx{
+    background-color:red;
+
+}
+
+.center_table{
+    display: flex;
+    justify-content: center;
+}
+.bordered-table {
+    border-collapse: collapse;
+    padding: 20px;
+    width: 80%;
+
+}
+
+.bordered-table th{
+    border: 1px solid #000;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.bordered-table td {
+    border: 1px solid #000;
+    padding: 8px;
+    font-weight: bold;
+}
